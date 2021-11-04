@@ -5,7 +5,6 @@ router.get("/show/:number", async (req, res) => {
     const number = req.params.number;
     try {
         let student = await Student.findOne({phone_number: number});
-        console.log(student)
 
         if (!student) {
             return res.status(404).json({
