@@ -1,6 +1,26 @@
 const router = require("express").Router();
 const Student = require('./Student');
 
+router.get('', async (req, res) => {
+    
+    try {
+       
+      
+            return res.json({
+                message: "Student server",
+                succes: true
+            });
+    
+
+    } catch (err) {
+        console.log(err)
+        res.status(500).json({
+            message: "Server Error",
+            success: false
+        });
+    }
+});
+
 router.get("/show/:number", async (req, res) => {
     const number = req.params.number;
     try {
