@@ -21,7 +21,7 @@ router.get('', async (req, res) => {
     }
 });
 
-router.get("/show/:number", async (req, res) => {
+router.get("/:number", async (req, res) => {
     const number = req.params.number;
     try {
         let student = await Student.findOne({phone_number: number});

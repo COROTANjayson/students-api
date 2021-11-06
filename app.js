@@ -10,7 +10,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use("/api/students", require("./routes"));
+// app.use("/api/students", require("./routes"));
 app.use("/", require("./routes"));
 
 const startApp = async () => {
